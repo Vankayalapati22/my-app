@@ -28,6 +28,8 @@ jobs:
 
       # 4. Build Next.js app (static export)
       - run: npm run build
+        env:
+          NEXT_PUBLIC_API_URL: ${{ secrets.NEXT_PUBLIC_API_URL }}
 
       # 5. Upload static files
       - uses: actions/upload-pages-artifact@v3
